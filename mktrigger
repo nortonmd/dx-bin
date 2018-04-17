@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [[ $# -eq 1 ]]
+then
+	trigger_name=$1
+else
+	read -p "Trigger Name? " trigger_name
+fi
+
+if [[ $# -eq 2 ]]
+then
+	object_name=$2
+else
+	read -p "Object Name? " object_name
+fi
+
+if [[ -d force-app/main/default ]]
+then
+	trigger_dir="force-app/main/default/triggers"
+	classes_dir="force-app/main/default/classes"
+else
+	read -p "Target Dir? " trigger_dir
+fi
+
+echo "[info] sfdx force:apex:trigger:create -n $trigger_name -s $object_name -d $trigger_dir"
+sfdx force:apex:trigger:create -n $trigger_name -s $object_name -d $trigger_dir
+echo "[info] sfdx force:apex:class:create -n ${trigger_name}Test -d $classes_dir"
+sfdx force:apex:class:create -n ${trigger_name}Test -d $classes_dir
+
+
+

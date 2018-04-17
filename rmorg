@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ $# -eq 1 ]]
+then
+	scratch_org_alias=$1
+else
+	read -p "Delete which org? " scratch_org_alias
+fi
+
+echo "[info] sfdx force:org:delete -u $scratch_org_alias"
+sfdx force:org:delete -u $scratch_org_alias
+
+
+	

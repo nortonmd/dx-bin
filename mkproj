@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "[info] sfdx force:project:create -n $1"
+sfdx force:project:create -n $1
+

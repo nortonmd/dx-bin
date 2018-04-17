@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [[ $# -eq 1 ]]
+then
+	class_name=$1
+else
+	read -p "Class Name? " class_name
+fi
+
+if [[ -d force-app/main/default ]]
+then
+	classes_dir="force-app/main/default/classes"
+else
+	read -p "Target Dir? " trigger_dir
+fi
+
+echo "[info] sfdx force:apex:class:create -n ${class_name} -d ${classes_dir}"
+sfdx force:apex:class:create -n ${class_name} -d ${classes_dir}
+echo "[info] sfdx force:apex:class:create -n ${class_name}Test -d ${classes_dir}"
+sfdx force:apex:class:create -n ${class_name}Test -d ${classes_dir}
+
+
+
