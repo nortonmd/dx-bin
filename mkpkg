@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ $# -eq 1 ]]
+then
+	package_name=$1
+else
+	read -p "Package Name? " package_name
+fi
+
+echo "[info] sfdx force:package2:create -n ${package_name} -o Unlocked -e"
+sfdx force:package2:create -n ${package_name} -o Unlocked -e
