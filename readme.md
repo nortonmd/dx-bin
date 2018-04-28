@@ -35,7 +35,11 @@ lsorgs
 #### like mkdir command to make directories
 ```
 mkorg scratch1
+```
 
+### openorg - open a scratch org
+```
+openorg [ scratch1 ]
 ```
 
 ### rmorg - Remove a scratch org
