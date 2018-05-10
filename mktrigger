@@ -1,5 +1,10 @@
 #!/bin/bash
 
+function fail {
+	echo "ERROR: $@"
+	exit 1
+}
+
 if [[ $# -eq 1 ]]
 then
 	trigger_name=$1
@@ -23,9 +28,11 @@ else
 fi
 
 echo "sfdx force:apex:trigger:create -n $trigger_name -s $object_name -d $trigger_dir"
-sfdx force:apex:trigger:create -n $trigger_name -s $object_name -d $trigger_dir
+sfdx force:apex:trigger:create -n $trigger_name -s $object_name -d $trigger_dir || \
+	fail "Could not create trigger"
 echo "sfdx force:apex:class:create -n ${trigger_name}Test -d $classes_dir"
-sfdx force:apex:class:create -n ${trigger_name}Test -d $classes_dir
+sfdx force:apex:class:create -n ${trigger_name}Test -d $classes_dir || \
+	fail "Could not create trigger test class"
 
 
 
