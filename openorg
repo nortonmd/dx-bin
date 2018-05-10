@@ -2,11 +2,11 @@
 
 if [[ $# -eq 1 ]]
 then
-	echo "[info] sfdx force:org:open -u $1"
+	echo "sfdx force:org:open -u $1"
 	sfdx force:org:open -u $1
 	exit $?
 fi
 
-echo "[info] sfdx force:org:open"
+echo "sfdx force:org:open"
 sfdx force:org:open
 exit $?

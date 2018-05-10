@@ -9,7 +9,7 @@ else
 	read -p "Org Alias? " alias_name
 fi
 
-echo "[info] sfdx force:apex:execute -f ${file_name} -u ${alias_name}"
+echo "sfdx force:apex:execute -f ${file_name} -u ${alias_name}"
 sfdx force:apex:execute -f ${file_name} -u ${alias_name}
 
 

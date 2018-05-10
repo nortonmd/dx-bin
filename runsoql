@@ -17,7 +17,7 @@ fi
 
 soql=$(cat ${file_name})
 
-echo "[info] sfdx force:data:soql:query -q \"${soql}\" -u ${alias_name}"
+echo "sfdx force:data:soql:query -q \"${soql}\" -u ${alias_name}"
 sfdx force:data:soql:query -q "${soql}" -u ${alias_name}
 
 

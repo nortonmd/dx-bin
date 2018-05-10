@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "[info] sfdx force:org:list"
+echo "sfdx force:org:list"
 sfdx force:org:list

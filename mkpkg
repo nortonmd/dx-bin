@@ -7,5 +7,5 @@ else
 	read -p "Package Name? " package_name
 fi
 
-echo "[info] sfdx force:package2:create -n ${package_name} -o Unlocked -e"
+echo "sfdx force:package2:create -n ${package_name} -o Unlocked -e"
 sfdx force:package2:create -n ${package_name} -o Unlocked -e

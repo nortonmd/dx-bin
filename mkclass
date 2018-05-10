@@ -14,9 +14,9 @@ else
 	read -p "Target Dir? " trigger_dir
 fi
 
-echo "[info] sfdx force:apex:class:create -n ${class_name} -d ${classes_dir}"
+echo "sfdx force:apex:class:create -n ${class_name} -d ${classes_dir}"
 sfdx force:apex:class:create -n ${class_name} -d ${classes_dir}
-echo "[info] sfdx force:apex:class:create -n ${class_name}Test -d ${classes_dir}"
+echo "sfdx force:apex:class:create -n ${class_name}Test -d ${classes_dir}"
 sfdx force:apex:class:create -n ${class_name}Test -d ${classes_dir}
 
 

@@ -7,7 +7,7 @@ else
 	read -p "Delete which org? " scratch_org_alias
 fi
 
-echo "[info] sfdx force:org:delete -u $scratch_org_alias"
+echo "sfdx force:org:delete -u $scratch_org_alias"
 sfdx force:org:delete -u $scratch_org_alias
 
 

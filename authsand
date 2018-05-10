@@ -7,6 +7,6 @@ else
 	read -p "Org alias? " sandbox_org_alias
 fi
 
-echo "[info] sfdx force:auth:web:login -r https://test.salesforce.com -a $sandbox_org_alias"
+echo "sfdx force:auth:web:login -r https://test.salesforce.com -a $sandbox_org_alias"
 sfdx force:auth:web:login -r https://test.salesforce.com -a $sandbox_org_alias
 
