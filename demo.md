@@ -21,6 +21,7 @@ Create a class called `VFUtil`
 ```bash
 $ mkclass VFUtil
 
+sfdx force:apex:class:create -n VFUtil -d force-app/main/default/classes
 target dir = ./workspace/dx/demo/force-app/main/default/classes
    create VFUtil.cls
    create VFUtil.cls-meta.xml
@@ -123,6 +124,7 @@ Create a developer controlled package
 ```bash
 $ mkpkg vfutil
 
+sfdx force:package2:create -n vfutil -o Unlocked -e
 Successfully created a second-generation package (package2). 0Ho0g0000008OIFCA2 0330g000000TiF6AAK
 === Ids
 NAME                   VALUE
