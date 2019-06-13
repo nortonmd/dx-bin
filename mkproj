@@ -6,6 +6,8 @@ sfdx force:project:create -n $1
 echo "*** You should really update the config/scratch org def file with your email"
 echo 
 echo "Add \"adminEmail\": \"Your.Email@Company.com\", after \"edition\"."
-echo 
+echo "Add \"hasSampleData\": true,"
+echo "Add .forceignore and .gitignore"
+echo
 
 
