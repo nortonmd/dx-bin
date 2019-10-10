@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "sfdx force:apex:test:run -c -r human"
-sfdx force:apex:test:run -c -r human
+echo "sfdx force:apex:test:run -c -r human -w 10 -y"
+sfdx force:apex:test:run -c -r human -w 10 -y
