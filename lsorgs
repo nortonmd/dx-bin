@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "sfdx org list"
-sfdx org list
+echo "sf org list"
+sf org list
