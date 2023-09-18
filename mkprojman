@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "sfdx force:project:create -n $1 --manifest"
-sfdx force:project:create -n $1 --manifest
+echo "sf project -n $1 -x"
+sf project -n $1 -x
 mkdir $1/docs $1/scripts
 
 echo "*** You should really update the config/scratch org def file with your email"

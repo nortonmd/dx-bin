@@ -1,28 +1,13 @@
 #!/bin/bash
 
-## Open either a specific org or the default org
+## Open either a specific env or the default env
 if [[ $# -eq 1 ]]
 then
-	echo "sf org open -o $1"
-	sf org open -o $1
+	echo "sf env open -e $1"
+	sf env open -e $1
 	exit $?
+else
+	echo "usage: openorg [alias]"
+	exit 1
 fi
 
-echo "sf org open"
-sf org open
-
-exit $?
-
-## ################################################################################
-## Older Commands
-## ################################################################################
-if [[ $# -eq 1 ]]
-then
-	echo "sfdx force:org:open -u $1"
-	sfdx force:org:open -u $1
-	exit $?
-fi
-
-echo "sfdx force:org:open"
-sfdx force:org:open
-exit $?

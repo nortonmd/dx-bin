@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "sf org list"
-sf org list
+echo "sf env list"
+sf env list

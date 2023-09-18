@@ -7,6 +7,5 @@ else
 	read -p "Org alias? " org_alias
 fi
 
-echo "sfdx force:auth:web:login -a $org_alias"
-sfdx force:auth:web:login -a $org_alias
-
+echo "sf login org -a ${org_alias}"
+sf login org -a ${org_alias}

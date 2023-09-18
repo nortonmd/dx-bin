@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "sfdx force:auth:web:login -d -a DevHub"
-sfdx force:auth:web:login -d -a DevHub
+echo "sf login org -a DevHub -v -d"
+sf login org -a DevHub -v -d
