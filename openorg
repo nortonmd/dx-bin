@@ -1,10 +1,10 @@
 #!/bin/bash
 
-## Open either a specific env or the default env
+## Open either a specific org or the default org
 if [[ $# -eq 1 ]]
 then
-	echo "sf env open -e $1"
-	sf env open -e $1
+	echo "sf org open -o $1"
+	sf org open -o $1
 	exit $?
 else
 	echo "usage: openorg [alias]"
