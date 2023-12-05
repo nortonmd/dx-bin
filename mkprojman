@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "sf project -n $1 -x"
+echo "sf project generate -n $1 -d $1 -x"
+sf project generate -n $1 -d $1 -x
 sf project -n $1 -x
 mkdir $1/docs $1/scripts
 

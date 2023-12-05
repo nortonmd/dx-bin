@@ -7,5 +7,5 @@ else
 	read -p "Org alias? " org_alias
 fi
 
-echo "sf login org -a ${org_alias}"
-sf login org -a ${org_alias}
+echo "sf org login web -a ${org_alias}"
+sf org login web -a ${org_alias}
